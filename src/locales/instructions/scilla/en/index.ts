@@ -1,4 +1,4 @@
-import { CourseInstructionType } from '../../../typings';
+import { CourseInstructionType } from '../../../../typings';
 
 import chapter1 from './chapter1';
 import chapter2 from './chapter2';

@@ -1,4 +1,4 @@
-import { IChapterInstruction } from '../../../../typings';
+import { IChapterInstruction } from '../../../../../typings';
 
 const l1 = `
 ## Lesson 1: Contract declaration

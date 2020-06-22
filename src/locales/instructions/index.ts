@@ -1,9 +1,11 @@
-import en from './en';
+import en from './scilla/en';
+import solidityId from './solidity/id';
 
 export default {
-  en,
-  es: en,
-  ja: en,
-  ko: en,
-  zh: en
+  'solidity':{
+    'id':solidityId,
+  },
+  'scilla':{
+    en,
+  }
 };
