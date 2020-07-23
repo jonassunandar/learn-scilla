@@ -4,7 +4,10 @@
     "scilla",
     "smart contract",
     "zilliqa",
-    "blockchain"
+    "blockchain",
+    "friends with blockchain",
+    "smart contract development",
+    "tutorial"
   ],
   "version": "0.1.0",
   "scripts": {
@@ -49,11 +52,6 @@
     "collectCoverageFrom": [
       "src/components/**/*.{ts,tsx}"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn validate && yarn test:ci"
-    }
   },
   "license": "GPL-3.0",
   "browserslist": [
