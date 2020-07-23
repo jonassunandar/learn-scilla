@@ -9,12 +9,17 @@ import ReactGA from 'react-ga';
 import { Spinner } from 'react-fn-components';
 import HomeContainer from './containers/home-container';
 const ChapterListContainer = lazy(() => import('./containers/chapter-list-container'));
+// const SolidityChapterListContainer = lazy(() => import('./containers/solidity-chapter-list-container'));
 const LessonContainer = lazy(() => import('./containers/lesson-container'));
+// const SolidityLessonContainer = lazy(() => import('./containers/solidity-lesson-container'));
 
 export const paths = {
   home: '/home',
-  chapterList: '/chapters',
-  lesson: '/chapter/:chapter/lesson/:lesson'
+  chapterList: '/:course/chapters',
+  lesson: '/:course/chapter/:chapter/lesson/:lesson',
+  // default:'/solidity/chapters'
+  // solidityChapterList: '/solidity/chapters',
+  // solidityLesson: '/solidity/chapter/:chapter/lesson/:lesson'
 };
 
 const sendPageView = (location) => {
@@ -47,10 +52,13 @@ export const RouterNode: React.SFC = () => (
         }
       >
         <Switch>
-          <Route exact={true} path={paths.home} component={HomeContainer} />
+          {/* <Route exact={true} path={paths.home} component={HomeContainer} /> */}
           <Route exact={true} path={paths.chapterList} component={ChapterListContainer} />
           <Route exact={true} path={paths.lesson} component={LessonContainer} />
-          <Redirect from="/" to={paths.home} />
+          {/* <Route exact={true} path={paths.solidityLesson} component={SolidityLessonContainer} />
+          <Route exact={true} path={paths.solidityChapterList} component={SolidityChapterListContainer} /> */}
+          
+          {/* <Redirect from="/" to={paths.default} /> */}
         </Switch>
       </Suspense>
     </GoogleAnalytics>
